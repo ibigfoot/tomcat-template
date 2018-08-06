@@ -1,6 +1,8 @@
 package launch;
 
 import java.io.File;
+import java.util.logging.Logger;
+
 import org.apache.catalina.WebResourceRoot;
 import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.startup.Tomcat;
@@ -9,8 +11,14 @@ import org.apache.catalina.webresources.StandardRoot;
 
 public class Launch {
 
+	
+	private static final Logger LOG = Logger.getLogger(Launch.class.getName());
+	
     public static void main(String[] args) throws Exception {
 
+    	LOG.info("Logger Name : "+ LOG.getName());
+
+    	
         String webappDirLocation = "src/main/webapp/";
         Tomcat tomcat = new Tomcat();
 
