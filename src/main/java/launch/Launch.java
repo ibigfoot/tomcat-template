@@ -1,24 +1,23 @@
 package launch;
 
 import java.io.File;
-import java.util.logging.Logger;
 
 import org.apache.catalina.WebResourceRoot;
 import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Launch {
 
 	
-	private static final Logger LOG = Logger.getLogger(Launch.class.getName());
+	private static final Logger LOG = LoggerFactory.getLogger(Launch.class);
 	
     public static void main(String[] args) throws Exception {
 
-    	LOG.info("Logger Name : "+ LOG.getName());
-
-    	
+    	LOG.info("We have initialised log {}", LOG.getName());
         String webappDirLocation = "src/main/webapp/";
         Tomcat tomcat = new Tomcat();
 
