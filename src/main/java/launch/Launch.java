@@ -40,7 +40,7 @@ public class Launch {
         resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
                 additionWebInfClasses.getAbsolutePath(), "/"));
         ctx.setResources(resources);
-
+        LOG.info("Server has started...");
         tomcat.start();
         tomcat.getServer().await();
     }

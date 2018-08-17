@@ -22,7 +22,6 @@ public class EnforceHttps implements Filter {
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -39,9 +38,7 @@ public class EnforceHttps implements Filter {
 				response.sendRedirect("https://"+request.getServerName()+pathInfo);
 			}
 		}
-		
-		filterChain.doFilter(servletRequest, servletResponse);
-		
+		filterChain.doFilter(servletRequest, servletResponse);	
 	}
 
 	@Override
@@ -50,7 +47,4 @@ public class EnforceHttps implements Filter {
 		log = LoggerFactory.getLogger(this.getClass());
 		log.info("Initialised {}", this.getClass());
 	}
-	
-	
-
 }
