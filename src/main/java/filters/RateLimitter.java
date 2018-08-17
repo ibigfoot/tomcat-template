@@ -23,7 +23,7 @@ import utils.SecurityUtils;
 
 @WebServlet(
 		name="RateLimiter",
-		urlPatterns="/servlet/*"
+		urlPatterns="/api/*"
 )
 public class RateLimitter implements Filter {
 
