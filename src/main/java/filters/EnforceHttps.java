@@ -8,17 +8,12 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@WebServlet(
-		name="EnforceHttps",
-		urlPatterns= {"/"}
-)
 public class EnforceHttps implements Filter {
 
 	public static final String X_FORWARDED_PROTO = "X-Forwarded-Proto";
